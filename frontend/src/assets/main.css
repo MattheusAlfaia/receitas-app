@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #d42e16;
+  --color-highlight: #ffb627;
+  --color-complement: #1f7a4d;
+  --color-text: #2b1410;
+  --color-text-secondary: #6b4a40;
+  --color-background: #fff6ea;
+  --color-surface-secondary: #fbe5cf;
+  --color-border: #e8cdb5;
+  --color-danger: #9b1c0e;
+
+  --font-display: 'Fraunces', serif;
+  --font-sans: 'DM Sans', sans-serif;
+
+  --radius-field: 14px;
+  --radius-card: 22px;
+  --radius-card-lg: 28px;
+  --radius-modal: 32px;
+  --radius-pill: 99px;
+
+  --shadow-card-featured: 0 12px 32px rgb(212 46 22 / 14%);
+  --shadow-modal: 0 24px 64px rgb(43 20 16 / 28%);
+  --shadow-dish-photo: 0 8px 24px rgb(43 20 16 / 18%);
+}
+
+@layer base {
+  body {
+    @apply bg-background font-sans text-text;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-semibold;
+  }
+
+  :where(a, button, input, textarea, select, summary):focus-visible {
+    outline: 3px solid var(--color-highlight);
+    outline-offset: 2px;
+  }
+}
